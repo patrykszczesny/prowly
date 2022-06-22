@@ -35,4 +35,25 @@ When search "prowly" using “I'am feeling lucky” button
 Then browser should open https://prowly.com/ 
 
 
+Scenario 2:
+
+Searching word “prowly” in google.com filtered by date.
+
+Test case 1
+
+When searching is filtered between from 16/06/2023 to 16/06/2024
+Then not match any documents.
+
+Test case 2
+
+When searching is filtered from 6/16/2022 to 6/16/2010 
+Then google automatically change to correct range ( from 6/16/2010 to 6/16/2022) and search
+
+Test case 3
+
+When searching is filtered from 01/06/1950 to 01/06/1960
+Then not match any documents
+And 3 ads showing up, including  https://www.prowly.com/ 
+
+
 
