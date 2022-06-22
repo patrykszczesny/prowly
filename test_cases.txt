@@ -1,0 +1,38 @@
+Scenario 1:
+
+Searching word “prowly” in google.com filtered by categories (all, video, news etc.): 
+
+Test case 1
+
+Given google search in polish version
+When search “prowly” 
+Then should return prowly ad and prowly.com 
+
+Given google search in english version
+When search “prowly” 
+Then should return prowly ad and prowly.com
+
+Given google search in spanish version
+When search “prowly” 
+Then should return prowly ad and prowly.com
+
+
+Test case 2
+
+When type “prowlu” instead “prowly”
+Then google suggest to search “prowly”
+And all results concern “prowly”
+
+
+When type “prowlz” instead “prowly”
+Then google suggest to search “prowly”
+And first result is prowly.com
+
+
+Test case 3
+
+When search "prowly" using “I'am feeling lucky” button
+Then browser should open https://prowly.com/ 
+
+
+
